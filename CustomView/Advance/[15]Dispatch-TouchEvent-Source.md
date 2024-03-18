@@ -196,7 +196,7 @@ public boolean onTouchEvent(MotionEvent event) {
 
 **ViewGroup(通常是各种Layout) 的事件分发相对来说就要麻烦一些，因为 ViewGroup 不仅要考虑自身，还要考虑各种 ChildView，一旦处理不好就容易引起各种事件冲突，正所谓养儿方知父母难啊。**
 
-#### VIewGroup 的事件分发流程又是如何的呢？
+#### ViewGroup 的事件分发流程又是如何的呢？
 
  上一篇文章 [事件分发机制原理][dispatch-touchevent-theory] 中我们了解到事件是通过ViewGroup一层一层传递的，最终传递给 View，ViewGroup 要比它的 ChildView 先拿到事件，并且有权决定是否告诉要告诉 ChildView。在默认的情况下 ViewGroup 事件分发流程是这样的。
 
